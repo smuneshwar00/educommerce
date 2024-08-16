@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/header/header.component";
 import { TestChildComponent } from "./components/test-child/test-child.component";
 import { HeroBannerComponent } from "./components/hero-banner/hero-banner.component";
+import { CollectionsComponent } from "./components/collections/collections.component";
 
 @Component({
   selector: 'edu-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, TestChildComponent, HeroBannerComponent],
+  imports: [RouterOutlet, HeaderComponent, TestChildComponent, HeroBannerComponent, CollectionsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

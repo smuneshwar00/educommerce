@@ -1,4 +1,19 @@
 <edu-header></edu-header>
-<edu-test-child [productname]="'Product 1'" (productClicked)="productstatus=$event"></edu-test-child>&nbsp;{{productstatus}}
+<edu-hero-banner
+  [heading]="'Summer Collection'"
+  [caption]="'Awesome new summer collection.'"
+  [buttonText]="'Shop summer collection'"
+></edu-hero-banner>
+
+<edu-hero-banner
+  [heading]="'New collection for Kids'"
+  [buttonText]="'Explore Kids collection'"
+></edu-hero-banner>
+
+<edu-hero-banner
+  [heading]="'New collection for Women'"
+  [caption]="'Bright new summer collection.'"
+></edu-hero-banner>
+<!-- <edu-test-child [productname]="'Product 1'" (productClicked)="productstatus=$event"></edu-test-child>&nbsp;{{productstatus}}
 <edu-test-child [productname]="'Product 2'" (productClicked)="productstatus=$event"></edu-test-child>&nbsp;{{productstatus}}
-<edu-test-child [productname]="'Product 3'" (productClicked)="productstatus=$event"></edu-test-child>&nbsp;{{productstatus}}
+<edu-test-child [productname]="'Product 3'" (productClicked)="productstatus=$event"></edu-test-child>&nbsp;{{productstatus}} -->

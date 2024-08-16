@@ -12,6 +12,8 @@ export class TestChildComponent {
 
 @Input('productname') name:string = "";
 
+//2. @Output pushes an event with details to Parent so Prent can use those details
+  //in event binding
 @Output() productClicked = new EventEmitter<string>();
 
 onProductClick(prodName:string){

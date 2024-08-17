@@ -1,13 +1,12 @@
 <edu-header></edu-header>
+
+<router-outlet></router-outlet>
+
+
 <!-- <edu-test-child [productname]="'Product 1'" (productClicked)="productstatus=$event"></edu-test-child>&nbsp;{{productstatus}}
 <edu-test-child [productname]="'Product 2'" (productClicked)="productstatus=$event"></edu-test-child>&nbsp;{{productstatus}}
 <edu-test-child [productname]="'Product 3'" (productClicked)="productstatus=$event"></edu-test-child>&nbsp;{{productstatus}} -->
-<edu-hero-banner
-  [heading]="'Summer Collection'"
-  [caption]="'Awesome new summer collection.'"
-  [buttonText]="'Shop summer collection'"
-  [images]="summerImages"
-></edu-hero-banner>
+
 
 <!-- <edu-hero-banner
   [heading]="'New collection for Kids'"
@@ -20,6 +19,4 @@
   [images]="images"
 ></edu-hero-banner> -->
 
-<edu-collections [collections]="$listing | async"></edu-collections>
 
-<edu-create-collection></edu-create-collection>

@@ -1,0 +1,8 @@
+<edu-hero-banner
+  [heading]="'Summer Collection'"
+  [caption]="'Awesome new summer collection.'"
+  [buttonText]="'Shop summer collection'"
+  [images]="summerImages"
+></edu-hero-banner>
+
+<edu-collections [collections]="$listing | async"></edu-collections>

@@ -5,7 +5,7 @@ import { CreateCollectionTemplatePageComponent } from "../create-collection-temp
 @Component({
   selector: 'edu-create-collection-page',
   standalone: true,
-  imports: [CreateCollectionTemplatePageComponent],
+  imports: [CreateCollectionTemplatePageComponent, CreateCollectionComponent],
   templateUrl: './create-collection-page.component.html',
   styleUrl: './create-collection-page.component.css'
 })

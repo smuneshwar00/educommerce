@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CollectionsService, ICollection } from '../../services/collections.service';
 
 @Component({
@@ -11,9 +11,5 @@ import { CollectionsService, ICollection } from '../../services/collections.serv
 })
 export class CollectionsComponent {
 
-  collectionList : ICollection[] = []; 
-
-  constructor(private _collectionsService: CollectionsService) {
-    this.collectionList = this._collectionsService.collections;
-  }
+  @Input() collections: ICollection[] | null = [];
 }

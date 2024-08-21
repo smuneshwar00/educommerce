@@ -1,0 +1,19 @@
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+form{
+    margin-left: 60px;
+}
+
+input[type="text"]{
+    border: 1px solid #cccccc;
+    margin-left: 2%;  
+}
+
+p{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}

@@ -1,4 +1,5 @@
-import { AbstractControl, ValidationErrors } from "@angular/forms";
+import { Directive, Input } from "@angular/core";
+import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from "@angular/forms";
 
 export function match(passwordControl: string, confirmPasswordControl: string){
 
@@ -26,4 +27,22 @@ export function match(passwordControl: string, confirmPasswordControl: string){
         return null;
     }
 
+}
+
+
+@Directive({
+    selector: '[matchPasswords]',
+    standalone: true,
+    providers:[{
+        provide: NG_VALIDATORS,
+        useExisting: MatchValidatorDirective,
+        multi: true,
+    }]
+})
+export class MatchValidatorDirective  implements Validator {
+    @Input('matchPasswords') controlName: string[] = [];
+
+    validate(form: AbstractControl): ValidationErrors | null {
+        return match(this.controlName[0], this.controlName[1])(form);
+      }
 }

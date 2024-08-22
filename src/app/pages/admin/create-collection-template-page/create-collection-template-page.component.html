@@ -1,4 +1,6 @@
-<form #createCollectionForm="ngForm" (ngSubmit)="addCollection(createCollectionForm)">
+<form #createCollectionForm="ngForm" 
+(ngSubmit)="addCollection(createCollectionForm)" 
+[matchPasswords]="['password', 'confirmPassword']">
     <p>
       <label>Collection Name</label>
       <input required type="text" name="name" #name="ngModel" [(ngModel)]="formData.name" />
@@ -19,6 +21,19 @@
     Pristine: {{name.pristine}} -->
     </p>
     
+    <p>
+      <label>Password</label>
+      <input type="text" name="password" #password="ngModel" [(ngModel)]="formData.password"/>
+    </p>
+    <p>
+      <label>Confirm Password</label>
+      <input
+      type="text" name="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="formData.confirmPassword"/> 
+      <em>{{confirmPassword?.errors | json}}</em>
+    </p> 
+
+
+
     <button
 
     [ngStyle]="{ backgroundColor: createCollectionForm.invalid ? 'grey' : 'cadetBlue' }"

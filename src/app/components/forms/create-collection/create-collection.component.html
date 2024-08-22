@@ -42,7 +42,7 @@
     </p>
     <p>
       <label>Confirm Password</label>
-      <input type="text" formControlName="confirmPassword"/> <em>{{passwordMatchError?.errors | json}}</em>
+      <input [style.outline]="'none'" [style.border-color]="passwordMatchError?.errors!==null? 'red' : ''" type="text" formControlName="confirmPassword"/> <em>{{passwordMatchError?.errors | json}}</em>
     </p> 
 
     <button type="submit">Add Collection</button>

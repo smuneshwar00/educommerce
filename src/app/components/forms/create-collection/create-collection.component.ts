@@ -3,6 +3,7 @@ import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validator
 import { CollectionsService } from '../../../services/collections.service';
 import { CommonModule } from '@angular/common';
 import { emailValidator } from '../../../validators/email.validator';
+import { match } from '../../../validators/match.validator';
 
 @Component({
   selector: 'edu-create-collection',
@@ -24,6 +25,11 @@ export class CreateCollectionComponent implements OnInit {
       image: [''],
       icon: [''],
       email: ['', [Validators.required, emailValidator]],
+      password: [''],
+      confirmPassword: [''],
+    },
+    {
+      validators: [match("password","confirmPassword")]
     });
 
     this.form.get("email")?.valueChanges.subscribe(()=>{
@@ -48,5 +54,9 @@ export class CreateCollectionComponent implements OnInit {
 
   get emailControl() : AbstractControl | null{
     return this.form.get("email");
+  }
+
+  get passwordMatchError() : AbstractControl | null{
+    return this.form.get("confirmPassword");
   }
 }

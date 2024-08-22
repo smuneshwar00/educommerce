@@ -36,5 +36,14 @@
       >
     </p>
 
+    <p>
+      <label>Password</label>
+      <input type="text" formControlName="password"/>
+    </p>
+    <p>
+      <label>Confirm Password</label>
+      <input type="text" formControlName="confirmPassword"/> <em>{{passwordMatchError?.errors | json}}</em>
+    </p> 
+
     <button type="submit">Add Collection</button>
   </form>

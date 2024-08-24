@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ProductspageComponent } from './pages/productspage/productspage.component';
 import { CreateCollectionPageComponent } from './pages/admin/create-collection-page/create-collection-page.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 export const routes: Routes = [
     {
@@ -19,5 +20,10 @@ export const routes: Routes = [
         // /admin/create-collection
         path: 'admin/create-collection',
         component: CreateCollectionPageComponent,
+      },
+
+      {
+        path: 'products/:id',
+        component: ProductDetailComponent,
       },
 ];

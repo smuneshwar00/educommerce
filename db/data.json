@@ -1,5 +1,11 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "dadas@dasda.das",
+      "password": "$2a$10$7I7xlWHh5DQvD9GGwYBOyuzVGEKtxoKmGIscu7px4tl/gN5fUdyAu",
+      "id": 1
+    }
+  ],
   "products": [
     {
       "id": 1,

@@ -8,6 +8,7 @@ export const authGuard: CanActivateFn = (route, state) => {
 
   if(allowAccess){
     //redirects to page
+    console.log('authGuard passed.....')
     return true;
   }else{
     router.navigateByUrl("/");

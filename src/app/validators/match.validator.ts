@@ -3,12 +3,8 @@ import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from "@an
 
 export function match(passwordControl: string, confirmPasswordControl: string){
 
-    console.log("in match validator")
-
     return function( form: AbstractControl ): ValidationErrors | null{
 
-        console.log("in match validator -- "+ passwordControl)
-        console.log("in match validator--"+ confirmPasswordControl)
         const controlOneElement = form.get(passwordControl);
         const controlTwoElement = form.get(confirmPasswordControl);
 

@@ -23,7 +23,9 @@ export class LoginUserComponent {
     this.http
       .post('http://localhost:5500/login', this.loginForm.value) //requires "testEmail@abc.com" & encrypted password for Test@123
       .subscribe((data: any) => {
+        console.log(data);
         window.sessionStorage.setItem('auth-token', data.accessToken); //sets auth-token data in browser session
+        window.sessionStorage.setItem('admin', data.user.admin); //sets auth-token data in browser session
       });
   }
 

@@ -4,6 +4,7 @@ import { ProductspageComponent } from './pages/productspage/productspage.compone
 import { CreateCollectionPageComponent } from './pages/admin/create-collection-page/create-collection-page.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { authGuard } from './guards/auth.guard';
+import { adminGuard } from './guards/admin.guard';
 
 export const routes: Routes = [
     {
@@ -21,7 +22,7 @@ export const routes: Routes = [
         // /admin/create-collection
         path: 'admin/create-collection',
         component: CreateCollectionPageComponent,
-        canActivate: [authGuard]
+        canActivate: [authGuard, adminGuard]
       },
 
       {

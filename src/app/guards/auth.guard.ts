@@ -4,9 +4,9 @@ import { CanActivateFn, Router } from '@angular/router';
 export const authGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
 
-  const authState = false;
+  const allowAccess = window.sessionStorage.getItem("auth-token"); //fetches auth state from session storage
 
-  if(authState){
+  if(allowAccess){
     //redirects to page
     return true;
   }else{

@@ -26,12 +26,12 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit(): void {
 
     const { id } = this.activateRoute.snapshot.params;
-    // this._productService.getProductById(id).subscribe(product => {
-    //   this.product = product;
-    // });
+    this._productService.getProductById(id).subscribe(product => {
+      this.product = product;
+    });
 
-    this._projectService.getProjects().subscribe((projects)=>{
-      console.log(projects);
-    })
+    // this._projectService.getProjects().subscribe((projects)=>{
+    //   console.log(projects);
+    // })  Mock API call
   }
 }

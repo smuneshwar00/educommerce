@@ -12,6 +12,6 @@ export class ProductsService {
   _config = inject(ConfigService);
 
   getProductById(id: string) {
-    return this._http.get<IProduct>(`${this._config.API_PRODUCT_URL}/${id}`);
+    return this._http.get<IProduct>(`${this._config.API_PRODUCT_URL}/${id}`)
   }
 }

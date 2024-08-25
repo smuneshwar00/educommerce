@@ -4,6 +4,11 @@
       "email": "dadas@dasda.das",
       "password": "$2a$10$7I7xlWHh5DQvD9GGwYBOyuzVGEKtxoKmGIscu7px4tl/gN5fUdyAu",
       "id": 1
+    },
+    {
+      "email": "testEmail@abc.com",
+      "password": "$2a$10$HalrzgoAY0JlAp7upMRnNeBq10RuV6liSnLDejVFA/HUz.WFdWJoK",
+      "id": 2
     }
   ],
   "products": [

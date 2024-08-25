@@ -23,7 +23,7 @@ export class RegisterUserComponent {
     this.http
       .post('http://localhost:5500/users', this.registerForm.value)
       .subscribe(() => {
-
+          console.log('Register user submitted with email: '+ this.registerForm.value.email);
       });
   }
 
